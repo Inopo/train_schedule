@@ -1,123 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en-us">
 
-    <title>Hw 7 the train baby the train</title>
+<head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="./csswork2.css">
-  </head>
-  <body>
-  <!-- This is the start of the Navigation bar  
-  http://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-and-right-aligned-items
-    
-    -->
- <nav class="navbar navbar-light navbar-toggleable-sm bg-faded justify-content-center" style="opacity: 0.3">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a href="/" class="navbar-brand d-flex w-50 mr-auto">This is the best app on planet earth</a>
-    <div class="navbar-collapse collapse" id="collapsingNavbar3">
-  
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Anasayfa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Hakkında</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">İletişim</a>
-            </li>
-        </ul>
+  <meta charset="UTF-8">
+  <title>CoderBay</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron Title -->
+    <div class="jumbotron">
+      <h1 class="text-center">Any Time is Train Time</h1>
+      <h3 class="text-center">"Choo Choo!!! Choof Chooph!"</h3>
     </div>
-</nav>
+<!-- Your table -->
 
-<!-- End of Navigation bar -->
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Current Train Schedule</div>
+
+  <!-- Table -->
+  <table class="table">
+      <thead>
+      <tr>
+        <th>Train Name</th>
+        <th>Destination</th>
+        <th>Frequency</th>
+        <th>Next Arrival</th>
+        <th>Minutes Away</th>
+      </tr>
+    </thead>
+
+    <tbody>
+<tr>
+    <td>Trenton Express</td>
+    <td>Trenton</td>
+    <td>25</td>
+    <td>05:35 pm</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>Trenton Express</td>
+    <td>Trenton</td>
+    <td>25</td>
+    <td>05:35 pm</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>Trenton Express</td>
+    <td>Trenton</td>
+    <td>25</td>
+    <td>05:35 pm</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>Trenton Express</td>
+    <td>Trenton</td>
+    <td>25</td>
+    <td>05:35 pm</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>Trenton Express</td>
+    <td>Trenton</td>
+    <td>25</td>
+    <td>05:35 pm</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>Trenton Express</td>
+    <td>Trenton</td>
+    <td>25</td>
+    <td>05:35 pm</td>
+    <td>10</td>
+</tr>
 
 
-<div class="jumbotron">
-  <h1 class="display-3">See the future</h1>
-  <p class="lead">Don't try at home, this site is prepared by professionals. </p>
-  <hr class="my-4">
-  <p>Amazing !  </p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
-</div>
 
-<!-- This is the table -->
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- Try list -->
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
+    </tbody>
   
+  </table>
+</div>
+    
+    <!-- Add Your Train -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Train</h3>
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="bidder-name">Train Name</label>
+                <input class="form-control" id="train-name" type="text">
+              </div>
+              <div class="form-group">
+                <label for="bidder-price">Destination</label>
+                <input class="form-control" id="train-destination" type="text">
+              </div>
+              <div class="form-group">
+                <label for="bidder-price">First Train Time</label>
+                <input class="form-control" id="first-train-time" type="number">
+              </div>
+              <div class="form-group">
+                <label for="bidder-price">Frequency</label>
+                <input class="form-control" id="tain-frequency" type="number">
+              </div>
+              <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="form-group">
-    <label for="exampleTextarea">Example textarea</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
   </div>
 
-
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-            
-            
-   
-
-
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-
-<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-<script>
+  <!-- Script -->
+  <script>
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCnDTQlfFp3GTbu47S2Qwy-Vadp5tcOX1w",
@@ -128,14 +144,8 @@
   };
   firebase.initializeApp(config);
 </script>
-  
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="./assets/javascript/logic.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  
- 
-<script src="./assets/javascript/logic.js"></script>
+</body>
 
-  </body>
 </html>
