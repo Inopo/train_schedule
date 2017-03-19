@@ -40,7 +40,7 @@ The elements that are in the data base will be presented.
 //Create a variable to reference the database
 
     	  var database = firebase.database();
-        console.log( "ready!" );
+        //console.log( "ready!" );
 
 // ----------------------------------------------------------------------------
 
@@ -113,6 +113,39 @@ var minutesAway = 0;
 
 
 
+    // Time is 3:30 AM
+    var firstTrainTime = "03:30";
+
+    // console.log("firstTrainTime >>>>>", firstTrainTime);
+
+    // First Time (pushed back 1 year to make sure it comes before current time)
+    var firstTimeConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
+
+    console.log(moment(firstTrainTime, "hh:mm"));
+    console.log(firstTimeConverted);
+
+    // Current Time
+    var currentTime = moment();
+    // console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    // console.log("DIFFERENCE IN TIME: " + diffTime);
+
+    // Time apart (remainder)
+    var tRemainder = diffTime % frequency;
+    // console.log(tRemainder);
+
+    // Minute Until Train
+    var minutesAway = frequency - tRemainder;
+    // console.log("MINUTES TILL TRAIN: " + minutesAway);
+
+    // Next Train
+    var nextArrival = moment().add(minutesAway, "minutes");
+   // console.log("ARRIVAL TIME: " + moment(nextArrival).format("hh:mm"));
+
+
+
 
 
 
@@ -127,7 +160,7 @@ for (var i = 0; i < test2.length; i++) {
 
 
 
-console.log("destinations >>>>",trains[test2[i]].destination);
+// console.log("destinations >>>>",trains[test2[i]].destination);
 
 var myDestination  = trains[test2[i]].destination;
 
