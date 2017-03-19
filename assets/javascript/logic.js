@@ -39,37 +39,26 @@ The elements that are in the data base will be presented.
 
 //Create a variable to reference the database
 
-    	var database = firebase.database();
-
-
-     console.log( "ready!" );
+    	  var database = firebase.database();
+        console.log( "ready!" );
 
 // ----------------------------------------------------------------------------
 
 // State 1: Here I want to capture the user in put, I can start with humble beginings
 
 //---------------------------------------------------------------------------------
-
-
 //Listen to the submit button click
 //capture the user train name input
-
-
-
-
 //Once the button is clicked, you need to push that input to the database.   
 $("#submit-train").on("click", function() {
-
-
 // Don't refresh the damn page!!!!
     event.preventDefault();
 
   // This is where you capture the inputs  
-
-var trainName = $("#train-name").val().trim();
-var destination = $("#destination").val().trim();
-var frequency = $("#frequency").val().trim();
-var firstTrainTime = $("#first-train-time").val().trim();
+        var trainName = $("#train-name").val().trim();
+        var destination = $("#destination").val().trim();
+        var frequency = $("#frequency").val().trim();
+        var firstTrainTime = $("#first-train-time").val().trim();
 
 // Log the 
 
@@ -77,10 +66,7 @@ var firstTrainTime = $("#first-train-time").val().trim();
 //console.log(destination);
 //console.log(frequency);
 //console.log(firstTrainTime);
-
-
-
-    database.ref("/trains").push({
+      database.ref("/trains").push({
       
       trainName: trainName,
       destination: destination,
@@ -124,56 +110,57 @@ console.log(myDestination); */
 //create a new line at the table
 var nextArrival = 0;
 var minutesAway = 0;
-var myTrainName = snapshot.val();
-var myDestination = snapshot.child("destination").val();
-var myFrequency = snapshot.child("frequency").val();
 
-console.log("here is myTrainName", myTrainName);
+
+
+
+
 
 
 var trains = snapshot.val();
 
+
 var test2 = Object.keys(trains);
 
-console.log ("keys of the obejct",  test2);
+for (var i = 0; i < test2.length; i++) {
 
 
 
 
-console.log("here is trains>>>", trains);
-for (var key in trains){
+console.log("destinations >>>>",trains[test2[i]].destination);
 
-$("#full-list").append(+"<tr>"+"<td>"+myTrainName+"</td>"+"<td>"+myDestination+"</td>"+"<td>"+myFrequency+"</td>"+"<td>"+nextArrival+"</td>"+"<td>"+minutesAway+"</td>"+"</tr>");
+var myDestination  = trains[test2[i]].destination;
 
-  console.log("key is>>>", key, " and value is>>>>", trains[key])
+var myTrainName = trains[test2[i]].trainName;
+
+var myFrequency = trains[test2[i]].frequency;
+
+$("#full-list").append("<tr>"+"<td>"+myTrainName+"</td>"+"<td>"+
+  myDestination+"</td>"+"<td>"+myFrequency+"</td>"+"<td>"+nextArrival+
+  "</td>"+"<td>"+minutesAway+"</td>"+"</tr>");
+
+
+
+
 }
 
- [].forEach(function(train) {
-
-   // console.log(trains);
 
 
 
 
-// });
 
 
 
-// $("#full-list").append(+"<tr>"+"<td>"+test1+"</td>"+"<td>"+snapshot.val().destination+"</td>"+"<td>"+snapshot.val().frequency+"</td>"+"<td>"+nextArrival+"</td>"+"<td>"+minutesAway+"</td>"+"</tr>");
-//$("#full-list").append(+"<tr>"+"<td>"+snapshot.val().destination+"</td>"+"</tr>");
-//$("#full-list").append(+"<tr>"+"<td>"+snapshot.val().frequency+"</td>"+"</tr>");
-//$("#full-list").append(+"<tr>"+"<td>"+snapshot.val().firstTrainTime+"</td>"+"</tr>");
-
-});
 
 
 
-// push name etc there
 
 
-});
 
-});
+
+ 
+
+//});
 
 /*
 db = fb.db();
@@ -185,6 +172,12 @@ db.ref().on("value", function(snap)) {
   trains.forEach(function(train) 
 
   record.starTime; 
+
+
+snapshot.forEach(function(test2) {
+  console.log(snapshot.test2);  
+   //Here you can access  childSnapshot.key
+});
 
 
 })
@@ -240,8 +233,7 @@ query.once("value")
       // key will be "ada" the first time and "alan" the second time
       var key = childSnapshot.key;
       // childData will be the actual contents of the child
-      var childData = childSnapshot.val();
+      var childData = childSnapshot.val(); */
   });
 });
 
-*/
